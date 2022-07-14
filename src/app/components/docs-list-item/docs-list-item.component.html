@@ -1,0 +1,9 @@
+<ion-item class="core-folder-item" (click)="ItemClicked(pageName, item)">
+    <ion-thumbnail slot="start">
+        <ion-icon *ngIf="thumbnailImage!=true" class="folder-icon" name="{{iconName}}"></ion-icon>
+        <img *ngIf="thumbnailImage==true" class="file-icon" src="{{thumbnailImageSrc}}">
+    </ion-thumbnail>
+    <div class="item-content">
+        <p class="title">{{title}}</p>
+    </div>
+</ion-item>

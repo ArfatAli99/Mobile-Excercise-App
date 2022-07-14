@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+      <ion-menu-button class="menu-btn"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Messages</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 text-center *ngIf="list.length<1" style="color: gray;font-weight: bold">
+        No Mails found.
+    </h3>
+	<ion-list lines="none" *ngIf="list.length>0">
+     <app-thumbnail-list-item 
+            *ngFor="let item of list"
+            [item]="item"
+            [pageName]="'mails'"
+            [iconName]="'mail'"
+            [title]="item.mailsubject"
+            [detailIcon]="true"
+            (itemTap)="openMail($event)"
+            >
+    </app-thumbnail-list-item>
+  </ion-list>
+
+</ion-content>

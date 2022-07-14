@@ -1,0 +1,40 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button class="back-btn"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Replies</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-list class="core-list" lines="none">
+
+        <app-thumbnail-list-item 
+            *ngFor="let item of list"
+            [item]="item"
+            [pageName]="'comments'"
+            [iconName]="'person'"
+            [title]="item.firstname+' '+item.lastname"
+            [subTitle]="item.message"
+            [btnText]="fromNow(item.created_date)"
+            [btnIcon]="false"
+            >
+        </app-thumbnail-list-item>       
+       
+    </ion-list>
+</ion-content>
+<ion-footer>
+    <ion-row class="comment-box">
+        <ion-col size="12" class="comment-text-area">
+            <ion-textarea class="discussion-textarea" type="text" [(ngModel)]="comment" name="comment" placeholder="Type your comment..." autofocus>
+            </ion-textarea>
+        </ion-col>
+    </ion-row>
+    <ion-row class="comment-box">
+        <ion-col size="4">
+            <ion-button color="primary" class="default-btn post-btn" fill="block" (click)="addComment(comment)">
+                POST
+            </ion-button>
+        </ion-col>
+    </ion-row>
+</ion-footer>

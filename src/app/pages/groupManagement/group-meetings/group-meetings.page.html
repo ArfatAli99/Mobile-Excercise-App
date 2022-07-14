@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button class="back-btn"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Group Meetings</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <h3 text-center *ngIf="list.length<1" style="color: gray;font-weight: bold">
+        No Meetings found.
+    </h3>
+    <ion-list class="core-list" lines="none" *ngIf="list.length>0">
+     <app-thumbnail-list-item 
+            *ngFor="let item of list"
+            [item]="item"
+            [pageName]="'meetings'"
+            [iconName]="'desktop'"
+            [title]="item.smeetingname"
+            [btnText]="'Attend'"
+            [btnIcon]="true"
+            (itemTap)="openLink($event)"
+            >
+        </app-thumbnail-list-item>
+        
+    </ion-list>
+</ion-content>

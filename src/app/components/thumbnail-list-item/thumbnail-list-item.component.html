@@ -1,0 +1,23 @@
+<ion-item detail="{{detailIcon}}" class="core-thumbnail-item" (click)="ItemClicked(pageName, item)">
+    <ion-thumbnail slot="start">
+        <ion-icon *ngIf="thumbnailImage!=true" class="list-icon" name="{{iconName}}"></ion-icon>
+        <img *ngIf="thumbnailImage==true" class="list-icon-img" src="assets/imgs/icons/no-video.jpg">
+    </ion-thumbnail>
+    <div class="item-content">
+        <p class="title">{{title}}</p>
+        <p *ngIf="subTitle!=null" class="subtitle">{{subTitle}}</p>
+        <p *ngIf="pageName=='meetings'" class="subtitle">
+            {{item.dstartdatetime | date: "mediumDate" }} {{item.dstartdatetime | date: "shortTime" }}
+        </p>
+        <p *ngIf="pageName=='mails'" class="subtitle">
+            from: {{item.firstname}} at {{item.email_date | date: "MMM d, h:mm a" }}
+        </p>
+        <p *ngIf="subTitleDate!=null" class="subtitle">
+        	
+        </p>
+    </div>
+    <ion-button *ngIf="btnText!=null" class="end-btn" fill="clear" slot="end">
+        <ion-icon *ngIf="btnIcon==true" name="arrow-forward" slot="end"></ion-icon>
+        {{btnText}}
+    </ion-button>
+</ion-item>

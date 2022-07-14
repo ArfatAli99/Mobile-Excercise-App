@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button class="menu-btn"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Dashboard
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid class="core-grid">
+    <ion-row class="core-row">
+      <ion-col size="6" class="core-col">
+        <ion-card class="core-card"  (click)="openPage('my-groups')">
+          <ion-icon class="core-icon complementary" name="people"></ion-icon>
+          <ion-card-content>
+            <ion-card-title>
+              My Groups
+            </ion-card-title>
+            <p>
+              View all accepted workgroups and invitations.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6" class="core-col">
+        <ion-card class="core-card" (click)="openPage('allmeetings')">
+          <ion-icon class="core-icon primary" name="desktop"></ion-icon>
+          <ion-card-content>
+            <ion-card-title>
+              My Meetings
+            </ion-card-title>
+            <p>
+              Attend webinars and update your calendar.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    <ion-row class="core-row">
+      <ion-col size="6" class="core-col">
+        <ion-card class="core-card" (click)="openPage('my-documents')">
+          <ion-icon class="core-icon secondary" name="paper"></ion-icon>
+          <ion-card-content>
+            <ion-card-title>
+              My Documents
+            </ion-card-title>
+            <p>
+              This section contains your personal library. 
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+      <ion-col size="6" class="core-col">
+        <ion-card class="core-card" (click)="openPage('mail')">
+          <ion-icon class="core-icon tertiary" name="mail"></ion-icon>
+          <ion-card-content>
+            <ion-card-title>
+              My Messages
+            </ion-card-title>
+            <p>
+              View emails and notices from all your groups.
+            </p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  
+</ion-content>

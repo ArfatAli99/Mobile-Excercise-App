@@ -1,0 +1,38 @@
+	<ion-item class="activity-item">
+            <ion-label text-wrap>
+                <ion-text>
+                    <h3 class="activity-date">
+		        	{{item.dtcreated | date: "mediumDate" }} {{item.dtcreated | date: "shortTime" }}
+		        </h3>
+                </ion-text>
+                <div ngSwitch="{{item.notificationcategory}}" class="content-overflow">
+                    <div *ngSwitchCase="'Documents'">
+                        {{item.extra}} posted a document {{item.subject}} in {{item.group_name}}
+                    </div>
+                    <div *ngSwitchCase="'DocumentRevision'">
+                        {{item.extra}} replaced version {{item.notificationcategory}} of {{item.subject}}
+                    </div>
+                    <div *ngSwitchCase="'News'">
+                        {{item.description}} posted {{item.subject}} from {{item.group_name}}
+                    </div>
+                    <div *ngSwitchCase="'Meetings'">
+                        {{item.extra}} created a meeting {{item.subject}} {{item.description}}
+                    </div>
+                    <div *ngSwitchCase="'Members'">
+                        {{item.subject}} accepts invitation
+                    </div>
+                    <div *ngSwitchCase="'Archives'">
+                        {{item.subject}} sent from {{item.group_name}}
+                    </div>
+                    <div *ngSwitchCase="'Calendar'">
+                        {{item.description}} {{item.subject}} {{item.notificationcategory}}
+                    </div>
+                    <div *ngSwitchCase="'Other'">
+                        {{item.description}} {{item.subject}} {{item.notificationcategory}}
+                    </div>
+                    <div *ngSwitchDefault>
+                        {{item.description}}
+                    </div>
+                </div>
+            </ion-label>
+        </ion-item>

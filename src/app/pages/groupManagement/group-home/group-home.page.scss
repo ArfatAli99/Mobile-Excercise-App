@@ -1,0 +1,79 @@
+.main-wrapper {
+    height: 100%;
+    width: 100%;
+}
+
+.tint {
+    position: relative;
+    cursor: pointer;
+    background: url('../../../../assets/imgs/group-cover.png');
+    background-size: cover;
+    height: 100%;
+    /* max-height: 284px; */
+}
+
+.tint:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(6, 6, 6, 0.70);
+
+}
+
+.details-content {
+    position: absolute;
+    width: 100%;
+    top: 10%;
+    ion-row{
+        margin-top: 15px;
+    }
+}
+
+.card-title {
+    font-size: 2.0em;
+    width: 100%;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+}
+.card-desc{
+    font-size: 1.0em;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+}
+
+.card-btns {
+    width: 130px;
+    margin: auto;
+    color: var(--ion-default-dark-color);
+    --border-color: white;
+    --background: white;
+    --height: 54px;
+    --border-radius: 30px;
+}
+.details-btns{
+
+}
+
+.group-home-footer{
+    background: white;
+}
+
+.btn-wrapper{
+    width: calc(100% - 10px);
+    margin: auto;
+    border: 1px solid var(--ion-default-dark-color);
+}
+
+
+.default-item {
+    --min-height: 56px;
+    width: 240px;
+    margin: auto;
+}
+

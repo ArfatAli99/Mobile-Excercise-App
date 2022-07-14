@@ -1,0 +1,36 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button class="back-btn"></ion-back-button>
+        </ion-buttons>
+        <ion-buttons slot="primary">
+            <ion-button class="toolbar-btn" (click)="send(mail)">
+                <ion-icon slot="icon-only" name="send"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+        <ion-title>Reply</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-list>
+        <ion-item class="content-overflow">
+            <ion-label>
+                To
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="mail.to" name="to"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="ccEnable">
+            <ion-label>
+                CC
+            </ion-label>
+            <ion-input type="text" [(ngModel)]="mail.cc" name="cc" class="content-overflow"></ion-input>
+        </ion-item>
+        <ion-item class="content-overflow">
+            <ion-input type="text" [(ngModel)]="mail.subject" name="subject"></ion-input>
+        </ion-item>
+        <ion-item>
+            <div #content contenteditable="true" [innerHTML]="mail.content" name="content" class="mail-textarea" data-placeholder="Reply here" data-text="Reply here" autosize>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

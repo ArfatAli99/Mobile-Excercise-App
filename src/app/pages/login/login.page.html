@@ -1,0 +1,38 @@
+<ion-content padding>
+    <div class="center-image-wrapper margin-top">
+        <img class="content-logo" src="assets/imgs/logo.png" />
+    </div>
+
+    <ion-list>
+        <div class="login-box-wrapper margin-top">
+        <form [formGroup]="user" (ngSubmit)="doLogin(user.value)">
+
+            <ion-label class="input-label">Email</ion-label>
+            <ion-item class="round-input-item">
+                <ion-input 
+                	type="email" 
+                	placeholder="abc@example.com" 
+                	[formControl]="user.controls['username']">
+                </ion-input>
+            </ion-item>
+            <ion-label class="input-label">Password</ion-label>
+            <ion-item class="round-input-item">
+                <ion-input 
+                	type="password" 
+                	placeholder="enter password here" 
+                	[formControl]="user.controls['password']">
+                </ion-input>
+            </ion-item>
+             <ion-button 
+	            type="submit" 
+	            expand="block"
+	            class="default-btn login-btn"
+                size="large"
+	            [disabled]="!user.valid" 
+	            >
+            	Log in
+          	</ion-button>
+        </form>
+       </div>
+    </ion-list>
+</ion-content>

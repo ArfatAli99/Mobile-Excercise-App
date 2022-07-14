@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+  	 <ion-buttons slot="start">
+            <ion-back-button class="back-btn"></ion-back-button>
+        </ion-buttons>
+    <ion-title>Mail Content</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button class="toolbar-btn" (click)="openMailPopover($event)">
+        <ion-icon slot="icon-only" name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-list>
+      <ion-item>
+        <ion-label class="content-overflow">
+          <h2>{{item.firstname || ''}}{{item.lastname || ''}}</h2>
+          <p>to {{item.usermails || ''}}</p>
+          <p>{{item.email_date | date: "MMM d, h:mm a" }}</p><br>
+          <p [innerHTML]="item.mailtext"></p>
+        </ion-label>
+      </ion-item>        
+    </ion-list>
+
+</ion-content>

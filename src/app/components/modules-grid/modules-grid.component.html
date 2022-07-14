@@ -1,0 +1,8 @@
+<ion-grid class="modules-grid">
+    <ion-row class="grid-row" *ngFor="let row of gridItems | gridView: size ">
+        <ion-col *ngFor="let module of row.modules " class="grid-col" (click)="ItemClicked(pageName, module)">
+            <ion-icon name="{{module.icon}}" class="grid-col-icon"></ion-icon>
+            <span class="grid-col-text">{{module.title}}</span>
+        </ion-col>
+    </ion-row>
+</ion-grid>

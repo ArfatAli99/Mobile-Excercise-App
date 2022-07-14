@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+  	<!-- <ion-buttons slot="start">
+        <ion-back-button class="back-btn"></ion-back-button>
+    </ion-buttons> -->
+    <ion-buttons slot="primary">
+            <ion-button class="toolbar-btn" (click)="dismiss()">
+                <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+    <ion-title>Create News</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <p>When you post updates here, it will show in the latest activity feed and updates area.</p>
+  <div class="margin-top">
+    <form [formGroup]="news" (ngSubmit)="createNews(news.value)">
+
+            <ion-label class="input-label">Headline</ion-label>
+            <ion-item class="input-item">
+                <ion-input 
+                  type="text" 
+                  placeholder="News Headlines" 
+                  [formControl]="news.controls['headline']">
+                </ion-input>
+            </ion-item>
+            <ion-label class="input-label">Body</ion-label>
+            <ion-item class="input-item">
+                <ion-textarea 
+                
+                  placeholder="Enter News Detailes here." 
+                  [formControl]="news.controls['newsbody']">
+                </ion-textarea>
+            </ion-item>
+             <ion-button 
+              type="submit" 
+              expand="block"
+              class="default-btn"
+                size="large"
+              [disabled]="!news.valid" 
+              >
+              Post News
+            </ion-button>
+        </form>
+
+  </div>  
+
+</ion-content>

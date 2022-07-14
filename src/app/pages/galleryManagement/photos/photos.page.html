@@ -1,0 +1,28 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button class="back-btn"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Photos</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <h3 text-center *ngIf="list.length<1" style="color: gray;font-weight: bold">
+        No Photos found.
+    </h3>
+    <ion-list class="photos-grid" *ngIf="list.length>0">
+        <ion-grid>
+            <ion-row>
+                <ion-col class="photo-wrapper" *ngFor="let item of list" size="6" (click)="openPhotoViewer(item)">
+                    <img *ngIf="item.IMGFILE" src="{{item.IMGFILE}}">
+                    <img *ngIf="!item.IMGFILE" src="assets/imgs/icons/kitten.jpg">
+                </ion-col>
+            </ion-row>
+        </ion-grid>
+      
+    </ion-list>
+
+
+
+</ion-content>
+

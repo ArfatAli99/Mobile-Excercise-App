@@ -1,0 +1,40 @@
+ .modules-grid{
+ 	.grid-row:first-child { 
+       border-top: 1px solid;
+    }
+    .grid-row {
+        border-bottom: 1px solid var(--ion-default-dark-color);
+        border-left: 1px solid var(--ion-default-dark-color);
+        border-right: 1px solid var(--ion-default-dark-color);
+    }
+
+    .grid-col {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100%;
+        border-right: 1px solid var(--ion-default-dark-color);
+    }
+
+    .grid-row>.grid-col:last-child {
+        border-right: none
+    }
+
+    .grid-col-icon {
+        font-size: 38px;
+        display: block;
+        border: 1px solid ;
+        border-radius: 100px;
+        padding: 10px;
+        color: var(--ion-default-dark-color);
+    }
+
+    .grid-col-text {
+        display: block;
+        width: 100%;
+        text-align: center;
+        padding-top: 8px;
+        color: var(--ion-default-dark-color);
+    }
+}

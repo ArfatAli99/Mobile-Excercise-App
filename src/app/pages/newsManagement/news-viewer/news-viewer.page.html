@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="primary">
+            <ion-button class="toolbar-btn" (click)="dismiss()">
+                <ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+            </ion-button>
+    </ion-buttons>
+    <ion-title>News Details</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h3>{{item.headline}}</h3>
+  <p>{{item.newsbody}}</p> 
+
+</ion-content>

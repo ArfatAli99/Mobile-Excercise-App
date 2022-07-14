@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+        <ion-back-button class="back-btn"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Albums</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-label *ngIf="!list?.length">
+        <h2>No Albums Available.</h2>
+    </ion-label>    
+    <ion-list *ngFor="let item of list">
+      <ion-card  (click)="openPictureView(item)">
+        <img *ngIf="item.PICTURELINK.length" src="{{item.PICTURELINK}}"/>
+        <img *ngIf="!item.PICTURELINK.length" src="assets/imgs/speakers/doc.jpg">
+        <div class="card-title">{{item.ALBUMTITLE || ''}}</div>
+        <div class="card-subtitle">{{item.IMGCOUNT || '0'}} Photos</div>
+      </ion-card>
+    </ion-list> 
+</ion-content>

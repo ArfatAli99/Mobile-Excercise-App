@@ -1,0 +1,18 @@
+.mail-textarea {
+    font-size: fonts(ft-med) + .2;
+    white-space: normal;
+    word-wrap: break-word;
+    min-height: 50px;
+}
+
+.mail-textarea:empty:before {
+    content: attr(data-placeholder);
+    display: block;
+    color: clr(grey-light);
+}
+
+.mail-textarea,
+[contenteditable] {
+    -webkit-user-select: text;
+    user-select: text;
+}

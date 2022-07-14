@@ -1,0 +1,9 @@
+:host ::ng-deep app-thumbnail-list-item .core-thumbnail-item{
+	background: white;
+	--detail-push-color: var(--ion-color-dark);
+	box-shadow: inset 0px 0px 10px 1px rgba(37, 128, 177, 0.67);
+	--background: transparent;
+	.title{
+	    color: var(--ion-color-dark);
+	}
+}

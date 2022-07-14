@@ -1,0 +1,148 @@
+ /*Thumbnail Item Styles*/
+.core-thumbnail-item{
+	box-shadow: 0px 0px 10px 1px rgba(140, 142, 144, 0.67);
+    width: calc(100% - 10px);
+    margin: auto;
+    margin-top: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding: 8px 0px;
+
+
+	.list-icon{
+	    border: 1px solid;
+	    border-radius: 100px;
+	    background: white;
+	    font-size: 34px;
+	    padding: 10px;
+	    color: var(--ion-default-dark-color);
+	}
+	.list-icon-img{
+		height: 54px;
+	    width: 54px;
+	}
+	.item-content{
+		width: 95%;
+		.title{
+			margin: 0;
+		    font-weight: bold;
+		    margin-bottom: 5px;
+		    margin-top: 5px;
+		    font-size: 15px;
+		    text-transform: capitalize;
+		    white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            color: var(--ion-default-dark-color);
+		}
+		.subtitle{
+			margin: 0;
+		    margin-bottom: 10px;
+		    font-size: 11px;
+    		font-weight: lighter;
+    		color: var(--ion-default-gray-text);
+		}
+	}
+	.end-btn{
+		color: var(--ion-default-dark-color);
+	}
+	
+}
+/* End Thumbnail Item Styles*/
+
+
+/* Folder List item*/
+
+.core-folder-item{
+    width: calc(100% - 10px);
+    margin: auto;
+    margin-top: 16px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    --min-height: 70px;
+
+    .folder-icon{
+	    font-size: 54px;
+	    color: var(--ion-default-dark-color-2);
+	}
+
+	.file-icon{
+		height: 54px;
+	    width: 54px;
+	}
+	.item-content{
+		width: 95%;
+		.title{
+			color: var(--ion-default-dark-label);
+			margin: 0;
+		    font-weight: bold;
+		    margin-bottom: 5px;
+		    margin-top: 5px;
+		    font-size: 15px;
+		    text-transform: capitalize;
+		}
+		
+	}
+	
+	
+}
+
+/* End Folder Item*/
+
+
+/*Core Feed Card*/
+/* core Feed Card*/
+.core-feed-card{
+  margin-right: 5px;
+  margin-left: 5px;
+  box-shadow: 0 4px 16px rgba(37, 128, 177, 0.4)
+}
+ion-list > .core-feed-card:first-child{
+	margin-top: 15px;
+}
+.feed-card-header{
+	/*padding: 10px 0px 10px 0px;*/
+	padding: 0px;
+}
+
+.feed-item{
+    --padding-start: 16px;
+    --min-height: 60px;
+    .user-avatar{
+
+    }
+    .user-icon{
+    	font-size: 30px;
+	    border: 1px solid var(--ion-default-dark-color);
+	    border-radius: 25px;
+	    padding: 5px;
+	    color: var(--ion-default-dark-color);
+    }
+    .title{
+    	color: var(--ion-default-dark-color);
+    }
+    .date-btn{
+    	color: var(--ion-color-medium);
+    }
+}
+.feed-card-content{
+	min-height: 80px;
+	color: var(--ion-color-dark);
+}
+.like-btn{
+	color: var(--ion-color-medium);
+    font-weight: bold;
+}
+.reply-btn{
+	color: var(--ion-color-medium);
+    font-weight: bold;
+} 
+
+/*End of Feed Card*/
+
+/* Modal Default*/
+app-comments-viewer{
+	height: 100%;
+    width: 100%;
+    background: white;
+}

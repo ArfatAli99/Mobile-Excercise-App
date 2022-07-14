@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+        <ion-back-button class="back-btn"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Pending Groups</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h3 text-center *ngIf="list?.length==0" style="color: gray;font-weight: bold">
+       No Pending Groups.
+    </h3>
+    <ion-list *ngIf="list?.length>0">
+      <ion-item (click)="openPendingGroup(item)" *ngFor="let item of list">
+        <ion-avatar item-start>
+          <img src="https://dev.foodshield.org/member/templates/foodshield/images/logo.jpg">   
+        </ion-avatar>
+        <h2>{{item.group_name}}</h2>
+        <button ion-button clear item-end>View</button>
+      </ion-item>        
+    </ion-list>
+
+</ion-content>

@@ -1,0 +1,11 @@
+.core-list{
+	margin-top: 16px;
+}
+:host ::ng-deep app-thumbnail-list-item .core-list-item{
+	.list-icon{
+		color: var(--ion-color-dark);
+	}
+	.list-title{
+		color: gray;
+	}
+}

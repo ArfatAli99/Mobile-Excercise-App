@@ -1,0 +1,62 @@
+:host ::ng-deep app-thumbnail-list-item .core-thumbnail-item{
+    box-shadow: unset;
+    background: white;
+    border-bottom: 1px solid var(--ion-color-medium);
+    border-radius: unset;
+    margin-top: 5px;
+
+    ion-thumbnail{
+      width: 46px;
+      height: 46px;
+    }
+    .list-icon{
+      font-size: 24px;
+      padding: 8px;
+    }
+   
+    .title{
+        color: var(--ion-color-dark);
+    }
+    .subtitle{
+      color: var(--ion-color-dark);
+    }
+    .end-btn{
+      color: var(--ion-color-medium);
+    }
+}
+
+.footer{
+  background: white;
+  .comment-box{
+    padding: 0px 16px 0px 16px;
+    justify-content: flex-end;
+    ion-col{
+      padding-bottom: 0px;
+      padding-top: 0px;
+      height: 58px;
+    }
+    .comment-text-area{
+      height: 80px !important;
+    }
+    .post-btn{
+
+    }
+  }
+}
+
+.discussion-textarea{
+  background: #F6F6F6 !important;
+  border-radius: 5px !important;
+  --padding-start: 10px;
+  max-height: 75px;
+  margin-top: 4px;
+  height: 75px;
+}
+.post-btn{
+  color: white;
+  width: 100%;
+  --border-radius: 5px;
+  --height: 44px;
+  margin: auto;
+  margin-right: 1px;
+}

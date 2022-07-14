@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+        <ion-back-button class="back-btn"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Polls</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+    <h3 text-center *ngIf="list?.length==0" style="color: gray;font-weight: bold">
+        No Polls Found.
+    </h3>
+    <ion-list lines="none" *ngIf="list?.length>0">
+
+       <!--  <ion-item class="core-thumbnail-item"  (click)="openPoll({item:{}})" >
+            <ion-icon class="list-icon" name="stats" slot="start"></ion-icon>
+            <div class="item-content">
+                <p class="title">Test Poll</p>
+            </div>
+            <ion-button class="end-btn" fill="clear" slot="end">
+                view
+            </ion-button>
+        </ion-item> -->
+
+         <app-thumbnail-list-item 
+            *ngFor="let item of list"
+            [item]="item"
+            [pageName]="'polls'"
+            [iconName]="'stats'"
+            [title]="item.name"
+            [btnText]="'view'"
+            [btnIcon]="false"
+            (itemTap)="openPoll($event)"
+            >
+        </app-thumbnail-list-item>
+        
+
+    </ion-list>
+
+	
+
+</ion-content>

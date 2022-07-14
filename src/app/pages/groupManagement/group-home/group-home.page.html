@@ -1,0 +1,41 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button class="back-btn"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Group Details</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content>
+    <div class="main-wrapper">
+        <div class="tint"></div>
+        <div class="details-content">
+            <div class="card-title">{{group_name ||''}}</div>
+            <div class="card-desc">{{group_desc ||''}}</div>
+            <ion-row>
+                <ion-col size="6" text-center>
+                    <ion-button class="card-btns" expand="block" (click)="openPage('group-posts')">
+                        <ion-icon slot="end" name="list"></ion-icon>
+                        Discussions
+                    </ion-button>
+                </ion-col>
+                <ion-col size="6" text-center>
+                    <ion-button class="card-btns" expand="block" (click)="openPage('all-news')">
+                        <ion-icon slot="end" name="paper"></ion-icon>
+                        Updates
+                    </ion-button>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-content>
+<ion-footer class="group-home-footer">
+    <app-modules-grid [gridItems]='girdMenus' [size]='3' [pageName]="'group-grid'" (itemTap)="openMenu($event)">
+    </app-modules-grid>
+    <div class="btn-wrapper">
+        <ion-item class="default-item">
+            <ion-checkbox [(ngModel)]="default" color="light" (ionChange)="setDefaultGroup(group_id)"></ion-checkbox>
+            <ion-label>Set As Default Group</ion-label>
+        </ion-item>
+    </div>
+</ion-footer>

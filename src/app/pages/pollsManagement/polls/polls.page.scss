@@ -1,0 +1,18 @@
+:host ::ng-deep app-thumbnail-list-item .core-thumbnail-item{
+	ion-thumbnail{
+		height: 46px;
+    	width: 46px;
+	}
+	.list-icon{
+	    font-size: 24px;
+	}
+}
+
+/** Test Poll**/
+	ion-thumbnail{
+		height: 46px;
+    	width: 46px;
+	}
+	.list-icon{
+	    font-size: 24px;
+}

@@ -1,0 +1,132 @@
+ /* Global Styles for all APP */
+
+.toolbar-btn{
+  color: white;
+}
+/*Hedaer Styles*/
+.header-ios ion-toolbar{
+  --ion-toolbar-background: var(--ion-default-dark-color);
+}
+
+ion-title{
+   color: white;
+  font-weight: bold;
+}
+
+ion-back-button{
+   color: white !important;
+}
+
+/*Center Image Wrapper*/
+.center-image-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Logo Styles*/
+.content-logo{
+	height: 100px;
+    width: 216px;
+}
+
+/*Margins*/
+.margin-top{
+	margin-top: 50px;
+}
+
+/* Inputs */
+
+/* Input label Styles */
+.input-label {
+  padding-left: 16px;
+  font-weight: bold;
+  color: #565656;
+  letter-spacing: .25px;
+  margin: 14px 8px 6px 0 !important;
+  text-transform: uppercase;
+} 
+
+/*** Input Type Text Item Styles ****/
+
+.input-item {
+  background: #F6F6F6 !important;
+  border-radius: 0 !important;
+  --border-style: none;
+}
+
+.round-input-item {
+  --background: #F6F6F6;
+  --border-radius: 35px;
+  background: #F6F6F6 !important;
+  border-radius: 35px !important;
+  --border-style: none;
+}
+
+/*** End Input Item Styles ****/
+
+/*Default Dark Btn*/
+.default-btn{
+	--background: var(--ion-default-dark-color);
+  --height: 50px;
+}
+.back-btn{
+	color: white;
+}
+.footer-btn{
+  --border-radius: 0 !important;
+  width: 100%;
+  --height: 50px !important;
+  --margin-bottom: 0;
+  margin: 0;
+}
+
+/* Side Menu Styles*/
+.menu-btn{
+	  border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.menu-content{
+	--background:  var(--ion-default-dark-color);
+}
+.menu-margin-top{
+	margin-top:20px;
+}
+.menu-user{
+	width: 100px;
+  height: 100px;
+}
+.menu-username{
+	text-align: center;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  display: block;
+  width: 100%;
+}
+.menu-list{
+	background: transparent;
+	.menu-item{
+		color: white;
+		--border-color: white;
+    --detail-icon-color: white ;
+    --detail-icon-opacity: 1;
+    --padding-bottom: 5px;
+    --padding-top: 5px;
+    --background-activate: transparent;
+    --ion-color-tint: transparent;
+    --ion-color-shade: transparent;
+    --background: transparent;
+	}
+
+}
+
+/* Lists Designs*/
+.core-list{
+  min-height: 80%;
+}
+

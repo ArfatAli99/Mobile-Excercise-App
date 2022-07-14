@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "74254416207",
+    "firebase_url": "https://foodshield-5da4c.firebaseio.com",
+    "project_id": "foodshield-5da4c",
+    "storage_bucket": "foodshield-5da4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74254416207:android:f4930c9cb8a30b70",
+        "android_client_info": {
+          "package_name": "com.foodshield.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74254416207-j36jm8r0kr8eq9p4c4m0m21r12dbbs9h.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCY2r2ljUzbySOKjKunPu1KyqpzRwjLCBQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="primary"> 
+	    <ion-button class="toolbar-btn" (click)="dismiss()">
+	    	<ion-icon slot="icon-only" name="close-circle-outline"></ion-icon>
+	    </ion-button>
+	</ion-buttons>
+    <ion-title>{{poll.name}}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+	<ion-list lines="none">
+	  	<!-- Dynamic Radio Group Answers -->
+	  	<ion-card *ngFor="let item of list; let i = index">
+		  	<ion-radio-group [(ngModel)]="item.ANSWERID">
+			    <ion-list-header>
+			       {{item.QUESTION}}
+			    </ion-list-header>
+
+			    <ion-item *ngFor="let answer of item.ANSWERS">
+			      <ion-label>{{answer.ANSWER}}</ion-label>
+			      <ion-radio mode="md" slot="start" value="{{answer.ID}}"></ion-radio>
+			    </ion-item>
+		  	</ion-radio-group>
+		</ion-card>
+	</ion-list>
+</ion-content>
+<ion-footer>
+    <ion-button expand="full" class="default-btn footer-btn" (click)="submit()">
+       Submit Answer
+    </ion-button>
+</ion-footer>

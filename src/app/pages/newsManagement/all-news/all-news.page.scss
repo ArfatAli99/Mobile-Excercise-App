@@ -1,0 +1,15 @@
+:host ::ng-deep app-thumbnail-list-item .core-thumbnail-item{
+	ion-thumbnail{
+		height: 46px;
+    	width: 46px;
+	}
+	.list-icon{
+	    font-size: 24px;
+	}
+} 
+
+.footer-btn{
+	--background: white;
+    --color: var(--ion-default-dark-color);
+    border: 1px solid var(--ion-default-dark-color);
+}

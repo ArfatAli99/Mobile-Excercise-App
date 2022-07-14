@@ -1,0 +1,7 @@
+{
+  "name": "FoodSHIELD",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

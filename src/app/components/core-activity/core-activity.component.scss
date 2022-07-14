@@ -1,0 +1,30 @@
+
+.activity-item{
+  margin: 0px 0px 0px 6px;
+  border-left: 1px solid #d3d3d3;
+  padding: 0px 0px 32px 16px;
+  --padding-start: 10px;
+
+  .activity-date{
+    font-weight: 400;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+  }
+  
+}
+
+.activity-item:before {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: #7cc858;
+  left: 0px;
+  margin-top: 10px;
+}
+
+.content-overflow {
+  white-space: normal;
+  font-size: 15px;
+}

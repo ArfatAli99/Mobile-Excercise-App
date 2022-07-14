@@ -1,0 +1,81 @@
+/** Styles for Home Page Grid **/
+.core-grid {
+  --ion-grid-padding: 15px 0px 0px;
+}
+.core-grid > .core-row > .core-col {
+  padding: 0px;
+}
+
+.core-grid > .core-row > .core-col:last-child > .core-card {
+  margin: 0px 8px 15px;
+}
+
+.core-grid .core-card {
+  margin: 0px 0px 15px;
+  width: calc(100% - 8px);
+  width: -webkit-calc(100% 8px);
+  width: -moz-calc(100% - 8px);
+}
+
+.core-grid .core-card > img {
+  max-height: 50px;
+  width: auto;
+  margin: 12px auto 0px;
+}
+.core-grid .core-card > .card-content {
+  padding: 12px;
+  text-align: center;
+}
+.core-grid .core-card > .card-content > ion-card-title {
+  margin: 0px auto 12px;
+  font-size: 16px;
+  padding: 0px;
+}
+.core-grid .core-card > .card-content > p {
+  margin: 0px auto;
+  line-height: 22px;
+  font-size: 14px;
+  min-height: 66px;
+}
+
+.core-icon{
+    font-size: 55px;
+    display: flex;
+    margin: auto;
+    margin-top: 12px;
+  }
+
+/** End styles for Home Page Grid **/
+
+.core-inboxList {
+  position: relative;
+  border: none !important;
+  padding: 12px;
+}
+.core-inboxList > .core-mailIcon {
+  margin: 0px auto !important;
+  min-width: initial;
+  min-height: initial;
+}
+.core-inboxList > .core-mailIcon > img {
+  border-radius: 0px;
+  max-height: 28px;
+  width: auto;
+}
+.core-inboxList .label {
+  margin: 0px 15px;
+}
+.core-inboxList .label h2 {
+  margin: 0px auto;
+  line-height: 24px;
+}
+.core-inboxList .label p {
+  line-height: 24px;
+}
+.core-inboxList + .core-inboxList {
+  margin: 12px auto 0px;
+}
+
+.primary{ color: var(--ion-default-dark-color); }
+.secondary{ color: var(--ion-default-dark-color-2); }
+.tertiary{ color: var(--ion-default-dark-color-3); }

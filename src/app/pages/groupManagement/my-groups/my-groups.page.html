@@ -1,0 +1,35 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-menu-button class="menu-btn"></ion-menu-button>
+        </ion-buttons>
+        <ion-title>My Groups</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+
+    <h3 text-center *ngIf="list.length<1" style="color: gray;font-weight: bold">
+        No groups found.
+    </h3>
+    <ion-list class="core-list" lines="none" *ngIf="list.length>0">
+        <app-thumbnail-list-item 
+            *ngFor="let item of list"
+            [item]="item"
+            [pageName]="'mygroups'"
+            [iconName]="'people'"
+            [title]="item.group_name"
+            [subTitle]="item.description"
+            [detailIcon]="true"
+            (itemTap)="openGroupPage($event)"
+            >
+        </app-thumbnail-list-item>
+    </ion-list>  
+
+</ion-content>
+<ion-footer>
+   
+    <ion-button expand="block" class="default-btn footer-btn" (click)="openPIPage()">
+        Open Pending Invites
+    </ion-button>
+    
+</ion-footer>

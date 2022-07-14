@@ -1,0 +1,38 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-content class="menu-content" padding>
+        <div class="center-image-wrapper menu-margin-top">
+            <img class="menu-user" src="assets/imgs/default-user.png" />
+        </div>
+        <ion-label class="menu-username"></ion-label>
+        <ion-list class="menu-list">
+          <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
+            <ion-item class="menu-item" [routerDirection]="'root'" [routerLink]="[p.url]">
+              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-label>
+                {{p.title}}
+              </ion-label>
+            </ion-item>
+            
+          </ion-menu-toggle>
+          <ion-menu-toggle auto-hide="false">
+             <!-- <ion-item class="menu-item" [routerDirection]="'root'" > -->
+             <ion-item detail class="menu-item" (click)="logoutClicked()" >
+              <ion-icon slot="start" name="log-out"></ion-icon>
+              <ion-label>
+                Logout
+              </ion-label>
+            </ion-item>
+          </ion-menu-toggle>
+        </ion-list>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
+
+
+<!-- <ion-app>
+  <ion-router-outlet></ion-router-outlet>
+</ion-app> -->

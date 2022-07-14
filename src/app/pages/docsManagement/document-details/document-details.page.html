@@ -1,0 +1,72 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+	    <ion-back-button class="back-btn"></ion-back-button>
+	</ion-buttons>
+    <ion-title>Document</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	 <ion-list class="fs-docList">
+    <ion-item>
+      <ion-label small>
+        File: 
+      </ion-label>
+      <ion-label style="white-space: normal;">        
+      {{item.sname}}
+      </ion-label>
+    </ion-item>    
+    <ion-item>
+      <ion-label small>
+        Author: 
+      </ion-label>
+      <ion-label>        
+      {{item.firstname}} {{item.lastname}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label small>
+        Folder: 
+      </ion-label>
+      <ion-label>        
+      {{item.foldername}}
+      </ion-label>
+    </ion-item>    
+    <ion-item>
+      <ion-label>
+        Date: 
+      </ion-label>
+      <ion-label>
+        {{item.dtupdated | date: "shortDate"}}
+      </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>
+        Version: 
+      </ion-label>
+      <ion-label>
+        {{item.irevision}}.{{item.iminorrevision}}
+      </ion-label>
+    </ion-item>
+    <ion-item *ngIf="item.sdescription.length > 0">
+      <ion-label>
+        Desc: 
+      </ion-label>
+      <ion-label>
+        {{item.sdescription}}
+      </ion-label>
+    </ion-item>
+    <ion-item (click)="openFile()">
+      <ion-icon name="document" (click)="openFile()" large>
+      </ion-icon>View File
+    </ion-item>    
+    <ion-item (click)="download()">
+      <ion-icon name="md-download" large color="danger">
+      </ion-icon>
+      Download File
+    </ion-item>
+  </ion-list>
+
+</ion-content>

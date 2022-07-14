@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+            <ion-back-button class="back-btn"></ion-back-button>
+        </ion-buttons>
+    <ion-title>News & Updates</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  
+    <h3 text-center *ngIf="list?.length==0" style="color: gray;font-weight: bold">
+        No Updates Found.
+    </h3>
+    <ion-list lines="none" *ngIf="list?.length>0">
+      <app-thumbnail-list-item 
+            *ngFor="let item of list"
+            [item]="item"
+            [pageName]="'updates'"
+            [iconName]="'paper'"
+            [title]="item.headline"
+            [btnText]="'read'"
+            [btnIcon]="true"
+            (itemTap)="openNews($event)"
+            >
+        </app-thumbnail-list-item>
+
+    </ion-list>
+</ion-content>
+
+<ion-footer *ngIf="group?.owner == userId ">
+    <ion-button 
+        expand="block" 
+        class="default-btn footer-btn" 
+        (click)="CreateNews()">
+        Create News
+    </ion-button>
+</ion-footer>

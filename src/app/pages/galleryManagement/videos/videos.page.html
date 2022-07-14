@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start">
+            <ion-back-button class="back-btn"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Videos</ion-title>
+    </ion-toolbar>
+</ion-header>
+<ion-content padding>
+    <ion-label *ngIf="!list?.length">
+        <h2>No Videos Available.</h2>
+    </ion-label>
+    <ion-list lines="none">
+        <app-thumbnail-list-item 
+          *ngFor="let item of list" 
+          [item]="item" 
+          [pageName]="'video'" 
+          [title]="item.VID_VIDEONAME" 
+          [detailIcon]="true" 
+          [thumbnailImage]="true" 
+          (itemTap)="openVideo($event)">
+        </app-thumbnail-list-item>
+    </ion-list>
+</ion-content>

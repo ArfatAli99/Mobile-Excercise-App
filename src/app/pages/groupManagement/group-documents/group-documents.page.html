@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+  	<ion-buttons slot="start">
+        <ion-back-button class="back-btn"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Group Documents</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+	<ion-searchbar [(ngModel)]="myInput" [showCancelButton]="shouldShowCancel" (ionInput)="filterItems($event)" (ionCancel)="onCancel($event)">
+    </ion-searchbar>
+
+    <ion-list class="core-folder-list" lines="none">
+        <app-docs-list-item
+            *ngIf="prev"
+            [pageName]="'groupDocs'"
+            [iconName]="'folder'"
+            [title]="'Prev Folder'"
+            [dirId]= "prevDir"
+            [groupId]="prevGroup_id"
+            (itemTap)="openFolder($event)">
+        </app-docs-list-item>
+
+        <app-docs-list-item
+            *ngFor="let item of list1"
+            [pageName]="'groupDocs'"
+            [item]="item"
+            [iconName]="'folder'"
+            [title]="item.sname"
+            [dirId]= "item.id"
+            [groupId]="item.group_id"
+            (itemTap)="openFolder($event)">
+        </app-docs-list-item>
+
+    </ion-list>
+    <ion-list class="core-doc-list" lines="none">
+        <app-docs-list-item
+            *ngFor="let item of list"
+            [pageName]="'groupDocs'"
+            [title]="item.sname"
+            [item]="item"
+            [thumbnailImage]="true"
+            [thumbnailImageSrc]="'assets/imgs/icons/pdf.jpg'"
+            (itemTap)="openDoc($event)">
+        </app-docs-list-item>
+
+    </ion-list>
+	
+
+</ion-content>
